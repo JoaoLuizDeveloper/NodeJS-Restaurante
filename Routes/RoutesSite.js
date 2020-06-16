@@ -6,9 +6,9 @@ const express = require("express");
 
 //Controllers
 const Home = require('../Controllers/HomeController');
-const Restaurante = require('../Controllers/RestaurantController');
+const Restaurant = require('../Controllers/RestaurantController');
 const Menu = require('../Controllers/MenuController');
-//const Contact = require('../Controllers/ContactController');
+const Contact = require('../Controllers/ContactController');
 const Gallery = require('../Controllers/GalleryController');
 const Reserves = require('../Controllers/ReservesController');
 const News = require('../Controllers/NewsController');
@@ -22,40 +22,26 @@ RoutesSite.get("/", function (req, res) {
 })
 
 //O Restaurante
-RoutesSite.get("/Restaurant/", function (req, res) {
-    res.render("Restaurant/index");
-})
+RoutesSite.get("/Restaurant/", Restaurant.Index);
 
 //Menu
-RoutesSite.get("/Menu/", function (req, res) {
-    res.render("Menu/index");
-})
+RoutesSite.get("/Menu/", Menu.Index)
 
 //Contact
-RoutesSite.get("/Contact/", function (req, res) {
-    res.render("Contact/index");
-})
+RoutesSite.get("/Contact/", Contact.Index)
 
 //Gallery
     //Videos
-    RoutesSite.get("/Gallery/Videos", function (req, res) {
-        res.render("Gallery/videos");
-    })
+    RoutesSite.get("/Gallery/Videos", Gallery.Videos)
 
     //Pics
-    RoutesSite.get("/Gallery/Pics", function (req, res) {
-        res.render("Gallery/Pics");
-    })
+    RoutesSite.get("/Gallery/Pics", Gallery.Pics)
 
 //News
-RoutesSite.get("/News/", function (req, res) {
-    res.render("News/index");
-})
+RoutesSite.get("/News/", News.Index)
 
 //Reservations
-RoutesSite.get("/Reservations/", function (req, res) {
-    res.render("Reservations/index");
-})
+RoutesSite.get("/Reserves/", Reserves.Index)
 
 
 //Learning

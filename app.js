@@ -30,6 +30,16 @@ const RoutesAdmin = require("./Routes/RoutesAdmin");
     //app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 
 // Define Models in Routes
+// const menu = mongoose.model("menus");
+
+// new menu ({
+//     Titulo: "Rigatone",
+//     Descricao: "testes"
+// }).save().then(()=> {
+//     console.log("Cadstrado")
+// }).catch((err)=>{
+//     console.log("Fail"+ err)
+// });
 //Routes Site
 app.use(RoutesSite);
 app.use(RoutesAdmin);
