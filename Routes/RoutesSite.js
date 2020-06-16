@@ -5,8 +5,13 @@ const express = require("express");
 
 
 //Controllers
-//const Home = require('../Controllers/HomeController');
-//const Restaurante = require('../Controllers/RestauranteController');
+const Home = require('../Controllers/HomeController');
+const Restaurante = require('../Controllers/RestaurantController');
+const Menu = require('../Controllers/MenuController');
+//const Contact = require('../Controllers/ContactController');
+const Gallery = require('../Controllers/GalleryController');
+const Reserves = require('../Controllers/ReservesController');
+const News = require('../Controllers/NewsController');
 
 //Configurações
 const RoutesSite = express.Router();

@@ -4,8 +4,13 @@ const express = require("express");
 //const multer = require('multer');
 
 //Controllers
-//const Home = require('../Controllers/HomeController');
-//const Restaurante = require('../Controllers/RestauranteController');
+const Home = require('../Controllers/Admin/HomeController');
+const Restaurante = require('../Controllers/Admin/RestaurantController');
+const Menu = require('../Controllers/Admin/MenuController');
+const Contact = require('../Controllers/Admin/ContactController');
+const Gallery = require('../Controllers/Admin/GalleryController');
+const Reserves = require('../Controllers/Admin/ReservesController');
+const News = require('../Controllers/Admin/NewsController');
 
 //Configurações
 const Admin = express.Router();
